@@ -1,0 +1,1031 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{788BC472-59F7-46F6-B760-65C18BA74389}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LUXED</RootNamespace>
+    <AssemblyName>LUXED</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>$(SolutionDir)Output\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'EAC|AnyCPU'">
+    <OutputPath>bin\EAC\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType>None</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>Libs\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="Accessibility" />
+    <Reference Include="Assembly-CSharp">
+      <HintPath>Libs\GameAsm\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>Libs\GameAsm\Assembly-CSharp-firstpass.dll</HintPath>
+    </Reference>
+    <Reference Include="AVProVideo.Extensions.Timeline">
+      <HintPath>Libs\GameAsm\AVProVideo.Extensions.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="AVProVideo.Extensions.UnityUI">
+      <HintPath>Libs\GameAsm\AVProVideo.Extensions.UnityUI.dll</HintPath>
+    </Reference>
+    <Reference Include="AVProVideo.Extensions.VisualEffectGraph">
+      <HintPath>Libs\GameAsm\AVProVideo.Extensions.VisualEffectGraph.dll</HintPath>
+    </Reference>
+    <Reference Include="AVProVideo.Runtime">
+      <HintPath>Libs\GameAsm\AVProVideo.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="BeeByteObfuscator">
+      <HintPath>Libs\GameAsm\BeeByteObfuscator.dll</HintPath>
+    </Reference>
+    <Reference Include="BlobHandles.Runtime">
+      <HintPath>Libs\GameAsm\BlobHandles.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Boo.Lang">
+      <HintPath>Libs\GameAsm\Boo.Lang.dll</HintPath>
+    </Reference>
+    <Reference Include="Boo.Lang.Compiler">
+      <HintPath>Libs\GameAsm\Boo.Lang.Compiler.dll</HintPath>
+    </Reference>
+    <Reference Include="Boo.Lang.Extensions">
+      <HintPath>Libs\GameAsm\Boo.Lang.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Boo.Lang.Parser">
+      <HintPath>Libs\GameAsm\Boo.Lang.Parser.dll</HintPath>
+    </Reference>
+    <Reference Include="Boo.Lang.PatternMatching">
+      <HintPath>Libs\GameAsm\Boo.Lang.PatternMatching.dll</HintPath>
+    </Reference>
+    <Reference Include="Boo.Lang.Useful">
+      <HintPath>Libs\GameAsm\Boo.Lang.Useful.dll</HintPath>
+    </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>Libs\GameAsm\Cinemachine.dll</HintPath>
+    </Reference>
+    <Reference Include="Collections.Pooled">
+      <HintPath>Libs\GameAsm\Collections.Pooled.dll</HintPath>
+    </Reference>
+    <Reference Include="Commons.Xml.Relaxng">
+      <HintPath>Libs\GameAsm\Commons.Xml.Relaxng.dll</HintPath>
+    </Reference>
+    <Reference Include="cscompmgd, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libs\GameAsm\cscompmgd.dll</HintPath>
+    </Reference>
+    <Reference Include="CustomMarshalers" />
+    <Reference Include="DataModel">
+      <HintPath>Libs\GameAsm\DataModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Depthkit.Core">
+      <HintPath>Libs\GameAsm\Depthkit.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Depthkit.Studio">
+      <HintPath>Libs\GameAsm\Depthkit.Studio.dll</HintPath>
+    </Reference>
+    <Reference Include="Depthkit.Studio.Lite">
+      <HintPath>Libs\GameAsm\Depthkit.Studio.Lite.dll</HintPath>
+    </Reference>
+    <Reference Include="DeviceConfig">
+      <HintPath>Libs\GameAsm\DeviceConfig.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween">
+      <HintPath>Libs\GameAsm\DOTween.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween.Modules">
+      <HintPath>Libs\GameAsm\DOTween.Modules.dll</HintPath>
+    </Reference>
+    <Reference Include="Epic.OnlineServices">
+      <HintPath>Libs\GameAsm\Epic.OnlineServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Facepunch.Steamworks.Win64">
+      <HintPath>Libs\GameAsm\Facepunch.Steamworks.Win64.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf">
+      <HintPath>Libs\GameAsm\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="I18N">
+      <HintPath>Libs\GameAsm\I18N.dll</HintPath>
+    </Reference>
+    <Reference Include="I18N.CJK">
+      <HintPath>Libs\GameAsm\I18N.CJK.dll</HintPath>
+    </Reference>
+    <Reference Include="I18N.MidEast">
+      <HintPath>Libs\GameAsm\I18N.MidEast.dll</HintPath>
+    </Reference>
+    <Reference Include="I18N.Other">
+      <HintPath>Libs\GameAsm\I18N.Other.dll</HintPath>
+    </Reference>
+    <Reference Include="I18N.Rare">
+      <HintPath>Libs\GameAsm\I18N.Rare.dll</HintPath>
+    </Reference>
+    <Reference Include="I18N.West">
+      <HintPath>Libs\GameAsm\I18N.West.dll</HintPath>
+    </Reference>
+    <Reference Include="IBM.Data.DB2">
+      <HintPath>Libs\GameAsm\IBM.Data.DB2.dll</HintPath>
+    </Reference>
+    <Reference Include="Iced">
+      <HintPath>Libs\GameAsm\Iced.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>Libs\GameAsm\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppMicrosoft.Bcl.TimeProvider">
+      <HintPath>Libs\GameAsm\Il2CppMicrosoft.Bcl.TimeProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppMicrosoft.Extensions.DependencyInjection">
+      <HintPath>Libs\GameAsm\Il2CppMicrosoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppMicrosoft.Extensions.DependencyInjection.Abstractions">
+      <HintPath>Libs\GameAsm\Il2CppMicrosoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppMicrosoft.Extensions.Logging">
+      <HintPath>Libs\GameAsm\Il2CppMicrosoft.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppMicrosoft.Extensions.Logging.Abstractions">
+      <HintPath>Libs\GameAsm\Il2CppMicrosoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppMicrosoft.Extensions.Options">
+      <HintPath>Libs\GameAsm\Il2CppMicrosoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppMicrosoft.Extensions.Primitives">
+      <HintPath>Libs\GameAsm\Il2CppMicrosoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppMono.Security">
+      <HintPath>Libs\GameAsm\Il2CppMono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2Cppmscorlib">
+      <HintPath>Libs\GameAsm\Il2Cppmscorlib.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppNewtonsoft.Json">
+      <HintPath>Libs\GameAsm\Il2CppNewtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem">
+      <HintPath>Libs\GameAsm\Il2CppSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.Collections.Immutable">
+      <HintPath>Libs\GameAsm\Il2CppSystem.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.Configuration">
+      <HintPath>Libs\GameAsm\Il2CppSystem.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.Core">
+      <HintPath>Libs\GameAsm\Il2CppSystem.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.Data">
+      <HintPath>Libs\GameAsm\Il2CppSystem.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.Diagnostics.DiagnosticSource">
+      <HintPath>Libs\GameAsm\Il2CppSystem.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.Drawing">
+      <HintPath>Libs\GameAsm\Il2CppSystem.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.IO.Compression">
+      <HintPath>Libs\GameAsm\Il2CppSystem.IO.Compression.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.IO.Compression.FileSystem">
+      <HintPath>Libs\GameAsm\Il2CppSystem.IO.Compression.FileSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.IO.Hashing">
+      <HintPath>Libs\GameAsm\Il2CppSystem.IO.Hashing.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.Net.Http">
+      <HintPath>Libs\GameAsm\Il2CppSystem.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.Numerics">
+      <HintPath>Libs\GameAsm\Il2CppSystem.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.Runtime.CompilerServices.Unsafe">
+      <HintPath>Libs\GameAsm\Il2CppSystem.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.Runtime.Serialization">
+      <HintPath>Libs\GameAsm\Il2CppSystem.Runtime.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.Text.Encodings.Web">
+      <HintPath>Libs\GameAsm\Il2CppSystem.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.Text.Json">
+      <HintPath>Libs\GameAsm\Il2CppSystem.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.Threading.Channels">
+      <HintPath>Libs\GameAsm\Il2CppSystem.Threading.Channels.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.Xml">
+      <HintPath>Libs\GameAsm\Il2CppSystem.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.Xml.Linq">
+      <HintPath>Libs\GameAsm\Il2CppSystem.Xml.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppValve.Newtonsoft.Json">
+      <HintPath>Libs\GameAsm\Il2CppValve.Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="io.sentry.unity.runtime">
+      <HintPath>Libs\GameAsm\io.sentry.unity.runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="iOSInfo">
+      <HintPath>Libs\GameAsm\iOSInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="Klak.Spout.Runtime">
+      <HintPath>Libs\GameAsm\Klak.Spout.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Localization.Database">
+      <HintPath>Libs\GameAsm\Localization.Database.dll</HintPath>
+    </Reference>
+    <Reference Include="Localization.LocalizableString">
+      <HintPath>Libs\GameAsm\Localization.LocalizableString.dll</HintPath>
+    </Reference>
+    <Reference Include="Localization.StringFormatting">
+      <HintPath>Libs\GameAsm\Localization.StringFormatting.dll</HintPath>
+    </Reference>
+    <Reference Include="MeaMod.DNS">
+      <HintPath>Libs\GameAsm\MeaMod.DNS.dll</HintPath>
+    </Reference>
+    <Reference Include="Mediapipe.Runtime">
+      <HintPath>Libs\GameAsm\Mediapipe.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="MelonLoader, Version=0.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libs\MelonLoader.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>Libs\GameAsm\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.Core">
+      <HintPath>Libs\GameAsm\Microsoft.Web.WebView2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.WinForms">
+      <HintPath>Libs\GameAsm\Microsoft.Web.WebView2.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.Wpf">
+      <HintPath>Libs\GameAsm\Microsoft.Web.WebView2.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Btls.Interface">
+      <HintPath>Libs\GameAsm\Mono.Btls.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.C5">
+      <HintPath>Libs\GameAsm\Mono.C5.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cairo">
+      <HintPath>Libs\GameAsm\Mono.Cairo.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.CompilerServices.SymbolWriter">
+      <HintPath>Libs\GameAsm\Mono.CompilerServices.SymbolWriter.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.CSharp">
+      <HintPath>Libs\GameAsm\Mono.CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Data.Sqlite">
+      <HintPath>Libs\GameAsm\Mono.Data.Sqlite.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Data.Tds">
+      <HintPath>Libs\GameAsm\Mono.Data.Tds.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Http">
+      <HintPath>Libs\GameAsm\Mono.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Management">
+      <HintPath>Libs\GameAsm\Mono.Management.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Messaging">
+      <HintPath>Libs\GameAsm\Mono.Messaging.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Messaging.RabbitMQ">
+      <HintPath>Libs\GameAsm\Mono.Messaging.RabbitMQ.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Options">
+      <HintPath>Libs\GameAsm\Mono.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Parallel">
+      <HintPath>Libs\GameAsm\Mono.Parallel.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Posix">
+      <HintPath>Libs\GameAsm\Mono.Posix.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Profiler.Log">
+      <HintPath>Libs\GameAsm\Mono.Profiler.Log.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Security">
+      <HintPath>Libs\GameAsm\Mono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Security.Win32">
+      <HintPath>Libs\GameAsm\Mono.Security.Win32.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Simd">
+      <HintPath>Libs\GameAsm\Mono.Simd.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Tasklets">
+      <HintPath>Libs\GameAsm\Mono.Tasklets.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.WebBrowser">
+      <HintPath>Libs\GameAsm\Mono.WebBrowser.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.XBuild.Tasks">
+      <HintPath>Libs\GameAsm\Mono.XBuild.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="monodoc">
+      <HintPath>Libs\GameAsm\monodoc.dll</HintPath>
+    </Reference>
+    <Reference Include="netstandard">
+      <HintPath>Libs\GameAsm\netstandard.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Libs\GameAsm\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Novell.Directory.Ldap">
+      <HintPath>Libs\GameAsm\Novell.Directory.Ldap.dll</HintPath>
+    </Reference>
+    <Reference Include="NtpTimestamp">
+      <HintPath>Libs\GameAsm\NtpTimestamp.dll</HintPath>
+    </Reference>
+    <Reference Include="Oculus.Platform">
+      <HintPath>Libs\GameAsm\Oculus.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Oculus.VR">
+      <HintPath>Libs\GameAsm\Oculus.VR.dll</HintPath>
+    </Reference>
+    <Reference Include="OscCore.Runtime">
+      <HintPath>Libs\GameAsm\OscCore.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Photon-DotNet">
+      <HintPath>Libs\GameAsm\Photon-DotNet.dll</HintPath>
+    </Reference>
+    <Reference Include="RenderHeads.AVProMovieCapture.Runtime">
+      <HintPath>Libs\GameAsm\RenderHeads.AVProMovieCapture.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Sentry">
+      <HintPath>Libs\GameAsm\Sentry.dll</HintPath>
+    </Reference>
+    <Reference Include="Sentry.Microsoft.Bcl.AsyncInterfaces">
+      <HintPath>Libs\GameAsm\Sentry.Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Sentry.System.Buffers">
+      <HintPath>Libs\GameAsm\Sentry.System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="Sentry.System.Collections.Immutable">
+      <HintPath>Libs\GameAsm\Sentry.System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="Sentry.System.Memory">
+      <HintPath>Libs\GameAsm\Sentry.System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="Sentry.System.Numerics.Vectors">
+      <HintPath>Libs\GameAsm\Sentry.System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="Sentry.System.Reflection.Metadata">
+      <HintPath>Libs\GameAsm\Sentry.System.Reflection.Metadata.dll</HintPath>
+    </Reference>
+    <Reference Include="Sentry.System.Runtime.CompilerServices.Unsafe">
+      <HintPath>Libs\GameAsm\Sentry.System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="Sentry.System.Text.Encodings.Web">
+      <HintPath>Libs\GameAsm\Sentry.System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Sentry.System.Text.Json">
+      <HintPath>Libs\GameAsm\Sentry.System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Sentry.System.Threading.Tasks.Extensions">
+      <HintPath>Libs\GameAsm\Sentry.System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Sentry.Unity">
+      <HintPath>Libs\GameAsm\Sentry.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Sentry.Unity.Native">
+      <HintPath>Libs\GameAsm\Sentry.Unity.Native.dll</HintPath>
+    </Reference>
+    <Reference Include="Sigtrap.VrTunnellingPro">
+      <HintPath>Libs\GameAsm\Sigtrap.VrTunnellingPro.dll</HintPath>
+    </Reference>
+    <Reference Include="SMDiagnostics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libs\GameAsm\SMDiagnostics.dll</HintPath>
+    </Reference>
+    <Reference Include="SteamVR">
+      <HintPath>Libs\GameAsm\SteamVR.dll</HintPath>
+    </Reference>
+    <Reference Include="SteamVR_Actions">
+      <HintPath>Libs\GameAsm\SteamVR_Actions.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="UnhollowerBaseLib">
+      <HintPath>Libs\GameAsm\UnhollowerBaseLib.dll</HintPath>
+    </Reference>
+    <Reference Include="UnhollowerRuntimeLib">
+      <HintPath>Libs\GameAsm\UnhollowerRuntimeLib.dll</HintPath>
+    </Reference>
+    <Reference Include="UniTask">
+      <HintPath>Libs\GameAsm\UniTask.dll</HintPath>
+    </Reference>
+    <Reference Include="UniTask.Addressables">
+      <HintPath>Libs\GameAsm\UniTask.Addressables.dll</HintPath>
+    </Reference>
+    <Reference Include="UniTask.DOTween">
+      <HintPath>Libs\GameAsm\UniTask.DOTween.dll</HintPath>
+    </Reference>
+    <Reference Include="UniTask.Linq">
+      <HintPath>Libs\GameAsm\UniTask.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="UniTask.TextMeshPro">
+      <HintPath>Libs\GameAsm\UniTask.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.AI.Navigation">
+      <HintPath>Libs\GameAsm\Unity.AI.Navigation.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst">
+      <HintPath>Libs\GameAsm\Unity.Burst.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst.Unsafe">
+      <HintPath>Libs\GameAsm\Unity.Burst.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Collections">
+      <HintPath>Libs\GameAsm\Unity.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.InputSystem">
+      <HintPath>Libs\GameAsm\Unity.InputSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Mathematics">
+      <HintPath>Libs\GameAsm\Unity.Mathematics.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Postprocessing.Runtime">
+      <HintPath>Libs\GameAsm\Unity.Postprocessing.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Services.Core">
+      <HintPath>Libs\GameAsm\Unity.Services.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Services.Core.Configuration">
+      <HintPath>Libs\GameAsm\Unity.Services.Core.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Services.Core.Device">
+      <HintPath>Libs\GameAsm\Unity.Services.Core.Device.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Services.Core.Environments.Internal">
+      <HintPath>Libs\GameAsm\Unity.Services.Core.Environments.Internal.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Services.Core.Internal">
+      <HintPath>Libs\GameAsm\Unity.Services.Core.Internal.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Services.Core.Registration">
+      <HintPath>Libs\GameAsm\Unity.Services.Core.Registration.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Services.Core.Scheduler">
+      <HintPath>Libs\GameAsm\Unity.Services.Core.Scheduler.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Services.Core.Telemetry">
+      <HintPath>Libs\GameAsm\Unity.Services.Core.Telemetry.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Services.Core.Threading">
+      <HintPath>Libs\GameAsm\Unity.Services.Core.Threading.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>Libs\GameAsm\Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Timeline">
+      <HintPath>Libs\GameAsm\Unity.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.Management">
+      <HintPath>Libs\GameAsm\Unity.XR.Management.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.OpenVR">
+      <HintPath>Libs\GameAsm\Unity.XR.OpenVR.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>Libs\GameAsm\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AccessibilityModule">
+      <HintPath>Libs\GameAsm\UnityEngine.AccessibilityModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AIModule">
+      <HintPath>Libs\GameAsm\UnityEngine.AIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AndroidJNIModule">
+      <HintPath>Libs\GameAsm\UnityEngine.AndroidJNIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>Libs\GameAsm\UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ARModule">
+      <HintPath>Libs\GameAsm\UnityEngine.ARModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>Libs\GameAsm\UnityEngine.AssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>Libs\GameAsm\UnityEngine.AudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClothModule">
+      <HintPath>Libs\GameAsm\UnityEngine.ClothModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterInputModule">
+      <HintPath>Libs\GameAsm\UnityEngine.ClusterInputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterRendererModule">
+      <HintPath>Libs\GameAsm\UnityEngine.ClusterRendererModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ContentLoadModule">
+      <HintPath>Libs\GameAsm\UnityEngine.ContentLoadModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>Libs\GameAsm\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CrashReportingModule">
+      <HintPath>Libs\GameAsm\UnityEngine.CrashReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.DirectorModule">
+      <HintPath>Libs\GameAsm\UnityEngine.DirectorModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.DSPGraphModule">
+      <HintPath>Libs\GameAsm\UnityEngine.DSPGraphModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GameCenterModule">
+      <HintPath>Libs\GameAsm\UnityEngine.GameCenterModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GIModule">
+      <HintPath>Libs\GameAsm\UnityEngine.GIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GridModule">
+      <HintPath>Libs\GameAsm\UnityEngine.GridModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.HotReloadModule">
+      <HintPath>Libs\GameAsm\UnityEngine.HotReloadModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Il2CppAssetBundleManager">
+      <HintPath>Libs\GameAsm\UnityEngine.Il2CppAssetBundleManager.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Il2CppImageConversionManager">
+      <HintPath>Libs\GameAsm\UnityEngine.Il2CppImageConversionManager.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>Libs\GameAsm\UnityEngine.ImageConversionModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>Libs\GameAsm\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>Libs\GameAsm\UnityEngine.InputLegacyModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputModule">
+      <HintPath>Libs\GameAsm\UnityEngine.InputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.JSONSerializeModule">
+      <HintPath>Libs\GameAsm\UnityEngine.JSONSerializeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.LocalizationModule">
+      <HintPath>Libs\GameAsm\UnityEngine.LocalizationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.NVIDIAModule">
+      <HintPath>Libs\GameAsm\UnityEngine.NVIDIAModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>Libs\GameAsm\UnityEngine.ParticleSystemModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PerformanceReportingModule">
+      <HintPath>Libs\GameAsm\UnityEngine.PerformanceReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Physics2DModule">
+      <HintPath>Libs\GameAsm\UnityEngine.Physics2DModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>Libs\GameAsm\UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ProfilerModule">
+      <HintPath>Libs\GameAsm\UnityEngine.ProfilerModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PropertiesModule">
+      <HintPath>Libs\GameAsm\UnityEngine.PropertiesModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Purchasing">
+      <HintPath>Libs\GameAsm\UnityEngine.Purchasing.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule">
+      <HintPath>Libs\GameAsm\UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ScreenCaptureModule">
+      <HintPath>Libs\GameAsm\UnityEngine.ScreenCaptureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SharedInternalsModule">
+      <HintPath>Libs\GameAsm\UnityEngine.SharedInternalsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpatialTracking">
+      <HintPath>Libs\GameAsm\UnityEngine.SpatialTracking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteMaskModule">
+      <HintPath>Libs\GameAsm\UnityEngine.SpriteMaskModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteShapeModule">
+      <HintPath>Libs\GameAsm\UnityEngine.SpriteShapeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.StreamingModule">
+      <HintPath>Libs\GameAsm\UnityEngine.StreamingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SubstanceModule">
+      <HintPath>Libs\GameAsm\UnityEngine.SubstanceModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SubsystemsModule">
+      <HintPath>Libs\GameAsm\UnityEngine.SubsystemsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainModule">
+      <HintPath>Libs\GameAsm\UnityEngine.TerrainModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainPhysicsModule">
+      <HintPath>Libs\GameAsm\UnityEngine.TerrainPhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextCoreFontEngineModule">
+      <HintPath>Libs\GameAsm\UnityEngine.TextCoreFontEngineModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextCoreTextEngineModule">
+      <HintPath>Libs\GameAsm\UnityEngine.TextCoreTextEngineModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>Libs\GameAsm\UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TilemapModule">
+      <HintPath>Libs\GameAsm\UnityEngine.TilemapModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TLSModule">
+      <HintPath>Libs\GameAsm\UnityEngine.TLSModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Libs\GameAsm\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsModule">
+      <HintPath>Libs\GameAsm\UnityEngine.UIElementsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsNativeModule">
+      <HintPath>Libs\GameAsm\UnityEngine.UIElementsNativeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>Libs\GameAsm\UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UmbraModule">
+      <HintPath>Libs\GameAsm\UnityEngine.UmbraModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UNETModule">
+      <HintPath>Libs\GameAsm\UnityEngine.UNETModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsCommonModule">
+      <HintPath>Libs\GameAsm\UnityEngine.UnityAnalyticsCommonModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsModule">
+      <HintPath>Libs\GameAsm\UnityEngine.UnityAnalyticsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityConnectModule">
+      <HintPath>Libs\GameAsm\UnityEngine.UnityConnectModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityCurlModule">
+      <HintPath>Libs\GameAsm\UnityEngine.UnityCurlModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityTestProtocolModule">
+      <HintPath>Libs\GameAsm\UnityEngine.UnityTestProtocolModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+      <HintPath>Libs\GameAsm\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+      <HintPath>Libs\GameAsm\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule">
+      <HintPath>Libs\GameAsm\UnityEngine.UnityWebRequestModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestTextureModule">
+      <HintPath>Libs\GameAsm\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+      <HintPath>Libs\GameAsm\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VehiclesModule">
+      <HintPath>Libs\GameAsm\UnityEngine.VehiclesModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VFXModule">
+      <HintPath>Libs\GameAsm\UnityEngine.VFXModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VideoModule">
+      <HintPath>Libs\GameAsm\UnityEngine.VideoModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VirtualTexturingModule">
+      <HintPath>Libs\GameAsm\UnityEngine.VirtualTexturingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VRModule">
+      <HintPath>Libs\GameAsm\UnityEngine.VRModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.WindModule">
+      <HintPath>Libs\GameAsm\UnityEngine.WindModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.XRModule">
+      <HintPath>Libs\GameAsm\UnityEngine.XRModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Utf8StringInterpolation">
+      <HintPath>Libs\GameAsm\Utf8StringInterpolation.dll</HintPath>
+    </Reference>
+    <Reference Include="ValueTupleBridge">
+      <HintPath>Libs\GameAsm\ValueTupleBridge.dll</HintPath>
+    </Reference>
+    <Reference Include="vrc-oscquery-lib">
+      <HintPath>Libs\GameAsm\vrc-oscquery-lib.dll</HintPath>
+    </Reference>
+    <Reference Include="VRC.CameraSystems">
+      <HintPath>Libs\GameAsm\VRC.CameraSystems.dll</HintPath>
+    </Reference>
+    <Reference Include="VRC.CodeAnalysis">
+      <HintPath>Libs\GameAsm\VRC.CodeAnalysis.dll</HintPath>
+    </Reference>
+    <Reference Include="VRC.Core.Networking.Codec">
+      <HintPath>Libs\GameAsm\VRC.Core.Networking.Codec.dll</HintPath>
+    </Reference>
+    <Reference Include="VRC.Core.Networking.FlatBuffers">
+      <HintPath>Libs\GameAsm\VRC.Core.Networking.FlatBuffers.dll</HintPath>
+    </Reference>
+    <Reference Include="VRC.Core.Networking.Tools">
+      <HintPath>Libs\GameAsm\VRC.Core.Networking.Tools.dll</HintPath>
+    </Reference>
+    <Reference Include="VRC.Dynamics">
+      <HintPath>Libs\GameAsm\VRC.Dynamics.dll</HintPath>
+    </Reference>
+    <Reference Include="VRC.Logging">
+      <HintPath>Libs\GameAsm\VRC.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="VRC.SDK3.Depthkit">
+      <HintPath>Libs\GameAsm\VRC.SDK3.Depthkit.dll</HintPath>
+    </Reference>
+    <Reference Include="VRC.SDK3.Dynamics.Constraint">
+      <HintPath>Libs\GameAsm\VRC.SDK3.Dynamics.Constraint.dll</HintPath>
+    </Reference>
+    <Reference Include="VRC.SDK3.Dynamics.Contact">
+      <HintPath>Libs\GameAsm\VRC.SDK3.Dynamics.Contact.dll</HintPath>
+    </Reference>
+    <Reference Include="VRC.SDK3.Dynamics.PhysBone">
+      <HintPath>Libs\GameAsm\VRC.SDK3.Dynamics.PhysBone.dll</HintPath>
+    </Reference>
+    <Reference Include="VRC.SDKBase.Editor.BuildPipeline">
+      <HintPath>Libs\GameAsm\VRC.SDKBase.Editor.BuildPipeline.dll</HintPath>
+    </Reference>
+    <Reference Include="VRC.SDKInterface">
+      <HintPath>Libs\GameAsm\VRC.SDKInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="VRC.Udon">
+      <HintPath>Libs\GameAsm\VRC.Udon.dll</HintPath>
+    </Reference>
+    <Reference Include="VRC.Udon.ClientBindings">
+      <HintPath>Libs\GameAsm\VRC.Udon.ClientBindings.dll</HintPath>
+    </Reference>
+    <Reference Include="VRC.Udon.Common">
+      <HintPath>Libs\GameAsm\VRC.Udon.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="VRC.Udon.Security">
+      <HintPath>Libs\GameAsm\VRC.Udon.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="VRC.Udon.Serialization.AOT">
+      <HintPath>Libs\GameAsm\VRC.Udon.Serialization.AOT.dll</HintPath>
+    </Reference>
+    <Reference Include="VRC.Udon.Serialization.OdinSerializer">
+      <HintPath>Libs\GameAsm\VRC.Udon.Serialization.OdinSerializer.dll</HintPath>
+    </Reference>
+    <Reference Include="VRC.Udon.VM">
+      <HintPath>Libs\GameAsm\VRC.Udon.VM.dll</HintPath>
+    </Reference>
+    <Reference Include="VRC.Udon.VRCWrapperModules">
+      <HintPath>Libs\GameAsm\VRC.Udon.VRCWrapperModules.dll</HintPath>
+    </Reference>
+    <Reference Include="VRC.Udon.Wrapper">
+      <HintPath>Libs\GameAsm\VRC.Udon.Wrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="VRC.UI.Core">
+      <HintPath>Libs\GameAsm\VRC.UI.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="VRC.UI.Elements">
+      <HintPath>Libs\GameAsm\VRC.UI.Elements.dll</HintPath>
+    </Reference>
+    <Reference Include="VRC.UI.Shared">
+      <HintPath>Libs\GameAsm\VRC.UI.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="VRC.Utility">
+      <HintPath>Libs\GameAsm\VRC.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="VRCCore-Editor">
+      <HintPath>Libs\GameAsm\VRCCore-Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="VRCCore-Standalone">
+      <HintPath>Libs\GameAsm\VRCCore-Standalone.dll</HintPath>
+    </Reference>
+    <Reference Include="VRCEconomy">
+      <HintPath>Libs\GameAsm\VRCEconomy.dll</HintPath>
+    </Reference>
+    <Reference Include="VRCLog">
+      <HintPath>Libs\GameAsm\VRCLog.dll</HintPath>
+    </Reference>
+    <Reference Include="VRCSDK2">
+      <HintPath>Libs\GameAsm\VRCSDK2.dll</HintPath>
+    </Reference>
+    <Reference Include="VRCSDK3">
+      <HintPath>Libs\GameAsm\VRCSDK3.dll</HintPath>
+    </Reference>
+    <Reference Include="VRCSDK3A">
+      <HintPath>Libs\GameAsm\VRCSDK3A.dll</HintPath>
+    </Reference>
+    <Reference Include="VRCSDK3P">
+      <HintPath>Libs\GameAsm\VRCSDK3P.dll</HintPath>
+    </Reference>
+    <Reference Include="VRCSDKBase">
+      <HintPath>Libs\GameAsm\VRCSDKBase.dll</HintPath>
+    </Reference>
+    <Reference Include="websocket-sharp">
+      <HintPath>Libs\GameAsm\websocket-sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="WebTransMtn">
+      <HintPath>Libs\GameAsm\WebTransMtn.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="ZLogger">
+      <HintPath>Libs\GameAsm\ZLogger.dll</HintPath>
+    </Reference>
+    <Reference Include="__Generated">
+      <HintPath>Libs\GameAsm\__Generated.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\ConfigManager.cs" />
+    <Compile Include="Core\GameManager.cs" />
+    <Compile Include="Core\InternalSettings.cs" />
+    <Compile Include="CustomUI\MainMenu\AvatarMenu.cs" />
+    <Compile Include="CustomUI\MainMenu\UserMenu.cs" />
+    <Compile Include="CustomUI\QM\BotMenu.cs" />
+    <Compile Include="CustomUI\QM\BotMenus\AudioMenu.cs" />
+    <Compile Include="CustomUI\QM\BotMenus\ExploitMenu.cs" />
+    <Compile Include="CustomUI\QM\BotMenus\MiscMenu.cs" />
+    <Compile Include="CustomUI\QM\BotMenus\PhysicsMenu.cs" />
+    <Compile Include="CustomUI\QM\DebugMenu.cs" />
+    <Compile Include="CustomUI\QM\E1Selector.cs" />
+    <Compile Include="CustomUI\QM\ExploitMenu.cs" />
+    <Compile Include="CustomUI\QM\MainMenu.cs" />
+    <Compile Include="CustomUI\QM\PhysicsMenu.cs" />
+    <Compile Include="CustomUI\QM\SafetyMenu.cs" />
+    <Compile Include="CustomUI\QM\SpoofMenu.cs" />
+    <Compile Include="CustomUI\QM\UdonMenu.cs" />
+    <Compile Include="CustomUI\QM\UtilsMenu.cs" />
+    <Compile Include="CustomUI\QM\VisualsMenu.cs" />
+    <Compile Include="CustomUI\SelectedUserMenu\AvatarMenu.cs" />
+    <Compile Include="CustomUI\SelectedUserMenu\BotMenu.cs" />
+    <Compile Include="CustomUI\SelectedUserMenu\ExploitMenu.cs" />
+    <Compile Include="CustomUI\SelectedUserMenu\MainMenu.cs" />
+    <Compile Include="CustomUI\SelectedUserMenu\UtilsMenu.cs" />
+    <Compile Include="CustomUI\UIQuickChanges.cs" />
+    <Compile Include="Extensions\HighlightHelper.cs" />
+    <Compile Include="Extensions\InputHelper.cs" />
+    <Compile Include="Extensions\ItemHelper.cs" />
+    <Compile Include="Extensions\PhotonHelper.cs" />
+    <Compile Include="Hooking\AvatarPerformance_GetPerformanceScannerSet.cs" />
+    <Compile Include="Hooking\EasyHooking.cs" />
+    <Compile Include="Hooking\UdonBehaviour_SendCustomNetworkEvent.cs" />
+    <Compile Include="Hooking\VRCPlayerApi_get_displayName.cs" />
+    <Compile Include="Hooking\ExternVRCSDKBaseVRCPlayerApi_SetAvatarEyeHeightByMeters.cs" />
+    <Compile Include="Hooking\ExternVRCSDKBaseVRCPlayerApi_SetAvatarEyeHeightByMultiplier.cs" />
+    <Compile Include="Hooking\ExternVRCSDKBaseVRCPlayerApi_SetAvatarEyeHeightMaximumByMeters.cs" />
+    <Compile Include="Hooking\ExternVRCSDKBaseVRCPlayerApi_SetAvatarEyeHeightMinimumByMeters.cs" />
+    <Compile Include="Hooking\ExternVRCSDKBaseVRCPlayerApi_SetManuelAvatarScalingAllowed.cs" />
+    <Compile Include="Hooking\GamelikeInputController_SetPosition.cs" />
+    <Compile Include="Hooking\HTTPManager_SendRequestImpl.cs" />
+    <Compile Include="Hooking\PhoneBook_Handle.cs" />
+    <Compile Include="Hooking\PhotonPeer_SendOperation.cs" />
+    <Compile Include="Hooking\PlayerNameplate_Rebuild.cs" />
+    <Compile Include="Hooking\PlayerNet_OnNetworkReady.cs" />
+    <Compile Include="Hooking\QMUserCell_CreateCell.cs" />
+    <Compile Include="Hooking\RoomManager_SetupWorld.cs" />
+    <Compile Include="Hooking\StoreManager_DoesPlayerOwnProduct.cs" />
+    <Compile Include="Hooking\SubscriptionManager_GetActiveSubscription.cs" />
+    <Compile Include="Hooking\SystemInfo_GetdeviceUniqueIdentifier.cs" />
+    <Compile Include="Hooking\UdonClientImageDownloader_LoadUrlInternal.cs" />
+    <Compile Include="Hooking\UdonClientStringDownloader_LoadUrlInternal.cs" />
+    <Compile Include="Hooking\UserContentCell_CreateCell.cs" />
+    <Compile Include="Hooking\VRCAvatarManager_AttachAvatarInternal.cs" />
+    <Compile Include="Hooking\VRCAvatarManager_Update.cs" />
+    <Compile Include="Hooking\VRCNetworkingClient_OnEvent.cs" />
+    <Compile Include="Hooking\VRCNetworkingClient_OnOperationResponse.cs" />
+    <Compile Include="Hooking\VRCNetworkingClient_OpRaiseEvent.cs" />
+    <Compile Include="Hooking\VRCUiPageLoading_OnEnable.cs" />
+    <Compile Include="Hooking\VRCUnityVideoPlayer_LoadURL.cs" />
+    <Compile Include="Hooking\VRC_EventDispatcherRFC_Hook.cs" />
+    <Compile Include="Hooking\VRC_EventDispatcherRFC_ValidateAndTriggerEvent.cs" />
+    <Compile Include="Interfaces\IDelayModule.cs" />
+    <Compile Include="Interfaces\IDesktopOnly.cs" />
+    <Compile Include="Interfaces\IGlobalModule.cs" />
+    <Compile Include="Interfaces\IHook.cs" />
+    <Compile Include="Interfaces\IPlayerModule.cs" />
+    <Compile Include="Interfaces\IQuickMenu.cs" />
+    <Compile Include="Interfaces\IVROnly.cs" />
+    <Compile Include="Modules\EventManagement\ChatHandler.cs" />
+    <Compile Include="Modules\EventManagement\EventSanitizer.cs" />
+    <Compile Include="Modules\EventManagement\ModerationHandler.cs" />
+    <Compile Include="Modules\EventManagement\OperationHandler.cs" />
+    <Compile Include="Modules\EventManagement\SharingHandler.cs" />
+    <Compile Include="Modules\EventManagement\UserPropHandler.cs" />
+    <Compile Include="Modules\GradientQMTitle.cs" />
+    <Compile Include="Modules\HUDPlayerlist.cs" />
+    <Compile Include="Modules\Keybinds.cs" />
+    <Compile Include="Modules\LeapMotion\GestureMatcher.cs" />
+    <Compile Include="Modules\LeapMotion\LeapMain.cs" />
+    <Compile Include="Modules\LeapMotion\LeapObjects.cs" />
+    <Compile Include="Modules\LeapMotion\LeapTracked.cs" />
+    <Compile Include="Modules\Misc.cs" />
+    <Compile Include="Modules\Movement.cs" />
+    <Compile Include="Modules\PlayerESP.cs" />
+    <Compile Include="Modules\Playerlist.cs" />
+    <Compile Include="Modules\PlayerNameplates.cs" />
+    <Compile Include="Modules\PlayerTags.cs" />
+    <Compile Include="Modules\Standalone\AssetChanger.cs" />
+    <Compile Include="Modules\Standalone\AvatarSanitizer.cs" />
+    <Compile Include="Modules\Standalone\BotConnection.cs" />
+    <Compile Include="Modules\Standalone\ExploitHandler.cs" />
+    <Compile Include="Modules\Standalone\ExternalConsole.cs" />
+    <Compile Include="Modules\Standalone\FakeSerialize.cs" />
+    <Compile Include="Modules\Standalone\VRConsole.cs" />
+    <Compile Include="Modules\ThirdPerson.cs" />
+    <Compile Include="Modules\UserDetailList.cs" />
+    <Compile Include="Modules\WorldESP.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="UIApi\ButtonAPI.cs" />
+    <Compile Include="UIApi\MenuHelper.cs" />
+    <Compile Include="UIApi\PopupAPI.cs" />
+    <Compile Include="UIApi\QMExtentions.cs" />
+    <Compile Include="UIApi\Root.cs" />
+    <Compile Include="UIApi\UIMenuText.cs" />
+    <Compile Include="Wrappers\CPP2IL.cs" />
+    <Compile Include="Wrappers\EncryptUtils.cs" />
+    <Compile Include="Wrappers\GameHelper.cs" />
+    <Compile Include="Wrappers\GameUtils.cs" />
+    <Compile Include="Wrappers\GeneralUtils.cs" />
+    <Compile Include="Wrappers\HDLogger.cs" />
+    <Compile Include="Wrappers\IniFile.cs" />
+    <Compile Include="Wrappers\NativeMethods.cs" />
+    <Compile Include="Wrappers\PhotonUtils.cs" />
+    <Compile Include="Wrappers\PlayerSimplifier.cs" />
+    <Compile Include="Wrappers\PlayerUtils.cs" />
+    <Compile Include="Wrappers\UnityUtils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Avatar.png" />
+    <EmbeddedResource Include="Resources\Bots.png" />
+    <EmbeddedResource Include="Resources\Console.png" />
+    <EmbeddedResource Include="Resources\Debug.png" />
+    <EmbeddedResource Include="Resources\Disabled.png" />
+    <EmbeddedResource Include="Resources\Download.png" />
+    <EmbeddedResource Include="Resources\Enabled.png" />
+    <EmbeddedResource Include="Resources\Exploits.png" />
+    <EmbeddedResource Include="Resources\History.png" />
+    <EmbeddedResource Include="Resources\MediaDown.png" />
+    <EmbeddedResource Include="Resources\MediaNext.png" />
+    <EmbeddedResource Include="Resources\MediaPlay.png" />
+    <EmbeddedResource Include="Resources\MediaPrevious.png" />
+    <EmbeddedResource Include="Resources\MediaUp.png" />
+    <EmbeddedResource Include="Resources\moon.png" />
+    <EmbeddedResource Include="Resources\Nameplate.png" />
+    <EmbeddedResource Include="Resources\Options.png" />
+    <EmbeddedResource Include="Resources\Physics.png" />
+    <EmbeddedResource Include="Resources\Play.png" />
+    <EmbeddedResource Include="Resources\Safety.png" />
+    <EmbeddedResource Include="Resources\Spoof.png" />
+    <EmbeddedResource Include="Resources\Udon.png" />
+    <EmbeddedResource Include="Resources\Utils.png" />
+    <EmbeddedResource Include="Resources\Visuals.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\World.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy /Y "$(TargetPath)" "C:\Program Files (x86)\Steam\steamapps\common\VRChat\Mods\$(TargetFileName)"
+start "" "C:\Program Files (x86)\Steam\steamapps\common\VRChat\VRChat.exe"
+</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+</Project>
