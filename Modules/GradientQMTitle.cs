@@ -1,4 +1,6 @@
-﻿using LUXED.Interfaces;
+// This code has been made by an ia cuz i was lazy.
+
+using LUXED.Interfaces;
 using LUXED.UIApi;
 using MelonLoader;
 using System.Collections;
@@ -78,8 +80,7 @@ namespace LUXED.Modules
                 vertices[vertexIndex + 2] += offset;
                 vertices[vertexIndex + 3] += offset;
             }
-
-            // Apply changes
+            
             for (int i = 0; i < textInfo.meshInfo.Length; i++)
             {
                 textInfo.meshInfo[i].mesh.vertices = textInfo.meshInfo[i].vertices;
